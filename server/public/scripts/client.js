@@ -6,4 +6,11 @@
   
     var self = this; 
 
+count=0
+    
+    self.register = function(){
+        console.log(count)
+        count += 1
+        console.log(count)
+    }    
  });//End of PetHotel Controller
