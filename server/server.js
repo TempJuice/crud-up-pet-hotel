@@ -6,9 +6,11 @@ var port = 5000;
 
 //middleware
 app.use(bodyParser.urlencoded( {extended: true} ));
+app.use(express.static('server/public'));
+app.use(bodyParser.json());
 
 //spin up server
-app.listen(port, function (req, res) {
+app.listen(port, function (res) {
 console.log('Now listening on: ', port);
 
 });

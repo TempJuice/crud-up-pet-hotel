@@ -1,6 +1,6 @@
 ## CRUD Up Pet Hotel
 
-- [ ] You will be using Trello to track your progress on this application. Copy this Trello Board to get started.
+- [x] You will be using Trello to track your progress on this application. Copy this Trello Board to get started.
 
 As an MVP, you will create an application that allows owners to
 
@@ -18,11 +18,11 @@ Guidance on how to build your app.
 
 Database Tables
 
-- [ ] Create a new database called pet_hotel and add the following tables. Don't forget to add your primary and foreign keys!
+- [x] Create a new database called pet_hotel and add the following tables. Don't forget to add your primary and foreign keys!
 
 Table 1: Owners
 
-- [ ] Because owners can have multiple pets, it's best to include this in a separate table.
+Because owners can have multiple pets, it's best to include this in a separate table.
 
 Columns
 
@@ -51,20 +51,30 @@ This app will have one page: Owners and Pets
 
 View 1: Owners and Pets
 
-See this image for a mockup of the page.
-
 NOTE: Ignore the "Visits" link you see on the image . This is reserved for Hard mode.
 
-Submitting the Owner Registration form will add a new owner to the owners table.
-The Pets form includes a <select> drop-down list that needs to be populated with data from the owners table. Submitting this form will add a new pet to the pets table. HINT: In addition to displaying the name, make sure to keep track of each owner's id.
-The Pets table is ultimately populated with data from the owners, pets, and visits table. (Research LEFT OUTER JOIN if you hit a snag with this.)
-The owner name should be displayed, but not editable.
-All of the pet data displayed should be editable.
-Clicking the Go button under the Update column should update the pets table.
-Clicking the Go button under the Delete column should delete the pet from the pets table. HINT: Delete any visits for this pet before deleting it from the pets table.
-The Check-In/Check-out button will default to displaying IN when a pet is first created.
-Checking in a pet is done by inserting the current date into the check-in date column of the visits table. A checked-in pet will have a button that displays OUT.
-Checking out a pet is done by updating the check-out date column record in the visits table.
+    Submitting the Owner Registration form will add a new owner to the owners table.
+
+    The Pets form includes a <select> drop-down list that needs to be populated with data from the owners table. 
+
+    Submitting this form will add a new pet to the pets table. HINT: In addition to displaying the name, make sure to keep track of each owner's id.
+
+    The Pets table is ultimately populated with data from the owners, pets, and visits table. (Research LEFT OUTER JOIN if you hit a snag with this.)
+
+    The owner name should be displayed, but not editable.
+
+    All of the pet data displayed should be editable.
+
+    Clicking the Go button under the Update column should update the pets table.
+
+    Clicking the Go button under the Delete column should delete the pet from the pets table. HINT: Delete any visits for this pet before deleting it from the pets table.
+
+    The Check-In/Check-out button will default to displaying IN when a pet is first created.
+
+    Checking in a pet is done by inserting the current date into the check-in date column of the visits table. A checked-in pet will have a button that displays OUT.
+
+    Checking out a pet is done by updating the check-out date column record in the visits table.
+
 Hard Mode
 
 Create a second page for the application: Visits.

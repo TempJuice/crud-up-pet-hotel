@@ -4,7 +4,8 @@
   "description": "- [ ] You will be using Trello to track your progress on this application. Copy this Trello Board to get started.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js"
   },
   "repository": {
     "type": "git",
