@@ -11,6 +11,7 @@ CREATE TABLE owners (
     name varchar(20) NOT NULL,
     breed varchar(20) NOT NULL,
     color varchar(20) NOT NULL,
+    walks BOOLEAN
     owners_id integer REFERENCES owners
  );
  
