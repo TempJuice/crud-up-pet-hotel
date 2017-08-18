@@ -55,7 +55,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-2">
-                        <button id='register'>Register</button>
+                        <button id='register' ng-click="vm.register()">Register</button>
                     </div>
                 </div>
 
@@ -109,7 +109,7 @@
                 <divclass="col-md-1">
                     </div>
                 <div class="col-md-12">
-            <button id='registerPet'>Add Pet</button>
+            <button id='registerPet' >Add Pet</button>
                 </div>
                 
         </form>
@@ -130,19 +130,21 @@
                 <th> In/Out </th>
             </thead>
             <tbody id="petsInRegistry">
-                <tr>
-                    <td> Bob </td>
-                    <td> Micha </td>
-                    <td> Germane Pointer </td>
-                    <td> Tan</td>
+                <tr ng-repeat="pet in result">
+                    <td> pet.owners first_name </td>
+                    <td> pet.pets.name </td>
+                    <td> pet.pets.breed </td>
+                    <td> pet.pets.color</td>
                     <td> <select name='walks'>
-                            <option value="true">Yes</option>
-                            <option value="false">No</option>
+                        if(pet.pets.walks){
+                            <option value="true">Yes</option>}
+                            else{
+                            <option value="false">No</option>}
                         </select>
                         <!--needs to populate with whatever the owner selected-->
                     </td>
-                    <td> <button class='update'>Update</button> </td>
-                    <td> <button class='remove'>Remove</button> </td>
+                    <td> <button class='update' ng-click="function">Update</button> </td>
+                    <td> <button class='remove' ng-click= "function">Remove</button> </td>
                     <td> <button class='in/out'>In or Out</button> </td>
                     <!--should be loaded depending on current pet status-->
                 </tr>
