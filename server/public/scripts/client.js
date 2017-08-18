@@ -6,7 +6,7 @@ var app = angular.module('PetHotelApp', []);
   
     var self = this; 
 
-count=0
+    var count=0
     
     self.register = function(){
         console.log(count)

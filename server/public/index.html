@@ -106,10 +106,10 @@
                 <option value="false">No</option>
             </select>
                 </div>
-                <divclass="col-md-1">
+                <div class="col-md-1">
                     </div>
                 <div class="col-md-12">
-            <button id='registerPet' >Add Pet</button>
+            <button id='registerPet' ng-click="vm.register()" >Add Pet</button>
                 </div>
                 
         </form>
@@ -130,7 +130,7 @@
                 <th> In/Out </th>
             </thead>
             <tbody id="petsInRegistry">
-                <tr ng-repeat="pet in result">
+                <tr ng-repeat="pet in pet-status">
                     <td> pet.owners first_name </td>
                     <td> pet.pets.name </td>
                     <td> pet.pets.breed </td>
@@ -143,8 +143,8 @@
                         </select>
                         <!--needs to populate with whatever the owner selected-->
                     </td>
-                    <td> <button class='update' ng-click="function">Update</button> </td>
-                    <td> <button class='remove' ng-click= "function">Remove</button> </td>
+                    <td> <button class='update' ng-click="vm.register()">Update</button> </td>
+                    <td> <button class='remove' ng-click="vm.register()">Remove</button> </td>
                     <td> <button class='in/out'>In or Out</button> </td>
                     <!--should be loaded depending on current pet status-->
                 </tr>
