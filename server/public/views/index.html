@@ -1,12 +1,156 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <script src="vendors/angular.min.js"></script>
-    <script src="scripts/client.js"></script> 
-
-    <title>CRUD Up Pet Hotel</title>
+    <script src="scripts/client.js"></script>
+    <title>CRUD UP Pet Hotel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/viewOne.css">
 </head>
+
 <body>
-    
+    <div class="container" id='titleBar'>
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-5">
+                <h1 id='title'>Owners and Pets</h1>
+            </div>
+            <div class="col-md-5">
+                <a href="">Visits</a>
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </div>
+    <!--end of title bar-->
+    <div class="container" id='OwnerRegForLooks'>
+        <div class="row">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <h2> Owner Registration </h2>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1">
+            </div>
+            <form id='OwnerRegistration' class="form-inline">
+                <div class="form-group">
+                    <div class="col-md-4"><label>First Name</label>
+                        <input type="text" placeholder="First Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-4">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        <button id='register'>Register</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+    <!--end of OwnerRegistration-->
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+            </div>
+            <div id='petsEntry' class="col-md-2">
+                <h2> Pets </h2>
+                <div class="col-md-5">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <form id='petsRegistration' class="form-inline">
+            <div class="col-md-1">
+            </div>
+                <div class="form-group" class="col-md-2">
+            <label>Owner Name</label>
+            <select name='Owner_Name'>
+                <option value="owner 1">Owner1</option><!--needs to be added on a loop via angular-->
+                <option value="owner 2">Owner2</option><!--needs to be added on a loop via angular-->
+            </select>
+                </div>
+                <div class="form-group" class="col-md-2">
+            <label>Pet Name </label>
+            <input type="text" placeholder="Spot, Fido, etc...."></input>
+                </div>
+                <div class="form-group" class="col-md-2">
+            <label>Bread</label>
+            <input type="text" placeholder="Mastiff, Poodle, etc....."></input>
+                </div>
+                <div class="form-group" class="col-md-2">
+            <label>Color</label>
+            <input type="text" placeholder="Brindle, Tan, Blue, etc....."></input>
+                </div>
+                <div class="form-group"class="col-md-2">
+            <label>Walks</label>
+            <select name='walks'>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+                </div>
+                <divclass="col-md-1">
+                    </div>
+                <div class="col-md-12">
+            <button id='registerPet'>Add Pet</button>
+                </div>
+                
+        </form>
+    </div>
+        <!--end of petsRegistration-->
+    </div>
+    <!--end of petsEntry-->
+    <div id='registeredPets'>
+        <table>
+            <thead>
+                <th> Owner </th>
+                <th> Pet </th>
+                <th> Breed </th>
+                <th> Color </th>
+                <th> Walks </th>
+                <th> Update </th>
+                <th> Remove </th>
+                <th> In/Out </th>
+            </thead>
+            <tbody id="petsInRegistry">
+                <tr>
+                    <td> Bob </td>
+                    <td> Micha </td>
+                    <td> Germane Pointer </td>
+                    <td> Tan</td>
+                    <td> <select name='walks'>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                        <!--needs to populate with whatever the owner selected-->
+                    </td>
+                    <td> <button class='update'>Update</button> </td>
+                    <td> <button class='remove'>Remove</button> </td>
+                    <td> <button class='in/out'>In or Out</button> </td>
+                    <!--should be loaded depending on current pet status-->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--end of registeredPets-->
+
 </body>
+
 </html>
