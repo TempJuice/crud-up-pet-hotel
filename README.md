@@ -1,6 +1,6 @@
 ## CRUD Up Pet Hotel
 
-- [ ] You will be using Trello to track your progress on this application. Copy this Trello Board to get started.
+- [x] You will be using Trello to track your progress on this application. Copy this Trello Board to get started.
 
 As an MVP, you will create an application that allows owners to
 
@@ -18,11 +18,11 @@ Guidance on how to build your app.
 
 Database Tables
 
-- [ ] Create a new database called pet_hotel and add the following tables. Don't forget to add your primary and foreign keys!
+- [x] Create a new database called pet_hotel and add the following tables. Don't forget to add your primary and foreign keys!
 
 Table 1: Owners
 
-- [ ] Because owners can have multiple pets, it's best to include this in a separate table.
+Because owners can have multiple pets, it's best to include this in a separate table.
 
 Columns
 
@@ -50,8 +50,6 @@ Views
 This app will have one page: Owners and Pets
 
 View 1: Owners and Pets
-
-See this image for a mockup of the page.
 
 NOTE: Ignore the "Visits" link you see on the image . This is reserved for Hard mode.
 
